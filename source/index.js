@@ -571,7 +571,7 @@ class Prerender {
 
           if (path.endsWith("*")) {
             const starIndex = path.indexOf("*");
-            const pathSlice = path.slice(0, starIndex);
+            const pathSlice = path.slice(0, starIndex-1);
 
             if (this.req.url.startsWith(pathSlice)) return true;
           }
